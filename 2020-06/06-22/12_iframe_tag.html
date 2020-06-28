@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <title>html태그학습_12아이프레임(iframe)태그</title>
+</head>
+
+<body>
+ <h2>12아이프레임(iframe)태그</h2>
+ <p>인라인 프레임은 아이프레임이라고도 하며 웹문서 안의 특정위치에 또다른 웹문서를 삽입하기 위한 태그요소이다.</p>
+ <p>웹사이트 회원가입시 약관동의 페이지의 약관내용문서를 삽입하거나 유튜브 영상, 실시간 지도 서비스가 대표적이다.</p>
+ 
+ <ul>
+  <li>작성법) iframe src="삽입하고자 하는 문서의 주소나 경로"</li>
+  <li>width:가로크기 - 웹표준에서는 css로 대체</li>
+  <li>height:세로크기 - 웹표준에서는 css로 대체</li>
+  <li>src:문서의 경로</li>
+  <li>scrolling:스크롤바 생성유무(auto/yes/no)</li>
+ </ul>
+ 
+ <h3>1. 아이프레임 태그로 외부 사이트 삽입하기</h3>
+ <iframe src="https://www.11st.co.kr" width="1200" height="500"></iframe>
+
+ <h3>2. 아이프레임 태그로 외부 문서 삽입하기</h3>
+ <iframe src="../06-18/10_imagemap_tag.html" width="800" height="600" frameborder="0"></iframe>
+
+ <h3>3. 아이프레임 태그로 탭메뉴 콘텐츠 구현하기</h3>
+ <p>
+  <a href="http://www.coupang.co.kr" title="쿠팡" target="win">쿠팡</a>
+  <a href="http://www.auction.co.kr" title="옥션" target="win">옥션</a>
+  <a href="http://www.gmarket.co.kr" title="지마켓" target="win">지마켓</a>
+ </p>
+
+ <iframe src="http://www.coupang.co.kr" width="1024" height="300" name="win"></iframe>
+ 
+ <h3>4. 아이프레임 태그로 실시간 지도 삽입하기</h3>
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.3813568819805!2d126.987815215648!3d37.56963673170764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2e7f16f756d%3A0x414573df934d0e95!2z6re466aw7Lu07ZOo7YSw7JWE7Yq47ZWZ7JuQIOyiheuhnOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1592791003996!5m2!1sko!2skr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+ <h3>5. 아이프레임 태그로 영상 삽입하기</h3>
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/AvczH_VEo5I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+ <p>
+  iframe태그 작성시 width, height, frameborder 속성은 css로 대체하여 작성하여야 하며, 그렇지 않은 경우
+  html마크업 검사시 오류가 나고, iframe태그 작성시 닫는 요소가 반드시 나와야 한다. 그렇지 않은경우 아래
+  내용이 표시되지 않음.
+ </p>
+ 
+ 
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

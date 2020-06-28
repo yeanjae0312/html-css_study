@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <title>html태그학습_10_이미지맵</title>
+</head>
+
+<body>
+ <h2>10_이미지맵</h2>
+ <p>
+  이미지맵(image map)은 하나의 이미지에 여러개의 링크를 걸기 위한 기능으로서 이미지 위에 다각형, 사각형, 원형의
+  투명버튼을 만들어서 링크를 건다.
+ </p>
+ <p>
+  이미지를 삽입한 후, map태그와 area태그를 사용하여 img태그와 연결시켜 사용한다. 이때 사각형, 원형, 다각형은
+  좌표값을 사용하여 표시해준다.
+ </p>
+ <p>작성법) img src="" alt="" usemap="연결 할 맵 이름" </p>
+
+<!--포토샵에서 이미지 열고 f8눌러서 좌표 확인=> 1(20,12) 2(144,200) -->
+ <img src="./map/main_item1.jpg" alt="제품목록" usemap="#item">
+ <map name="item">
+  <area shape="rect" coords="20,12,144,200" href="http://www.11st.co.kr" title="11번가 바로가기">
+  <area shape="rect" coords="180,16,306,204" href="https://www.gmarket.co.kr" title="g마켓 바로가기">
+  <area shape="rect" coords="320,8,485,209" href="http://www.auction.co.kr" title="옥션 바로가기">
+  <area shape="rect" coords="486,12,648,211" href="https://www.interpark.com/malls/index.html?gateTp=1" title="인터파크 바로가기">
+ </map>
+ 
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

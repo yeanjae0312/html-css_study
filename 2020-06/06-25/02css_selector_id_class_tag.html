@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>css학습_01css선택자_id_class_tag</title>
+    
+    <style>
+        /*클래스 선택자*/
+        .site_name{
+            color:rgb(0, 0, 255);
+        }
+        /*아이디 선택자*/
+        #site_name2{
+            background-color: #ffff00;
+        }
+        /*태그 선택자*/
+        h3{background-color: #ffff00;}
+        p{background-color: #efbe3a;}
+    </style>
+    
+
+</head>
+
+<body>
+    <h2>css학습_01선택자_id_class_tag</h2>
+    <p>css의 선택자(selector)는 사용자가 서식을 적용하기 우해서 어떻게, 어떤방법으로 적용할 것인지를 결정하는 하나의 방법이나 수단을 말한다.</p>
+    <p>선택자의 종류에는 50개 정도가 있으며, w3schools에서 참고한다.</p>
+    
+    <h3>1. class선택자(.class)</h3>
+    <p>class선택자는 사용자가 적용하고자 하는 서식이 여러개일 때 <span class="site_name">반복하여 사용</span>하기 위해 사용할 수 있으며, 선택자의 이름 앞에는 '.'기호를 붙여준다.</p>
+    
+    <span class="site_name">네이버</span> 다음 
+    <span class="site_name">네이트</span> 구글
+    
+    <p>span요소는 서식을 작성하여 사용자가 원하는 영역을 지정하여 서식을 적용하고자 할 때 사용하며, inline성격이라서 줄바꿈이 되지 않는다.</p>
+    
+    <h3>2. id선택자(#id)</h3>
+    <p>
+        id선택자는 사용자가 적용하고자 하는 서식을 지정할 때 사용하며, class선택자와 동일한 방법으로 사용하지만, 차이점은 중복해서 적용되지
+        않는 서식을 사용할 때 사용한다. 선택자의 이름 앞에는 '#'기호를 붙인다.
+    </p>
+    
+    <span id="site_name2">옥션</span> 지마켓 
+    <span id="site_name2">11번가</span> 인터파크
+    
+    <p>id선택자는 아래의 태그요소처럼 라디오버튼, 체크박스, 레이블, top버튼을 만들 때 사용하며, 서식을 작성할 때도 사용할 수 있다.</p>
+    <input type="radio" id="r01"><label for="r01"></label>
+    <a href="#top">Top</a>
+    
+    <h3>3. tag선택자(b, i, em, table, hr, ul, li, img, a...)</h3>
+    <p>
+        tag선택자는 사용자가 선택한 태그요소 b, i, em, table, hr, ul, li, img, a...등에 서식을 적용하기 위한 선택자이며, 자동으로
+        문서 내에 있는 태그들을 찾아서 한꺼번에 적용이 되기 때문에 서식적용할 때 주의해야 한다.
+    </p>
+    
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

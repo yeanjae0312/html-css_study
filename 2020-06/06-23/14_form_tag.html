@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <title>html태그학습_14폼태그</title>
+
+  <style>
+   .search{
+	border:1px solid #3814ff;
+	border-radius:20px;
+	width:220px;
+   }
+   .search > input[type=search]{
+	border:none;
+	position:relative; /*지금 현재 자신을 기준으로 밑에 left와 top을 쓰겠다. position:relative;와 움직일 간격을 같이 쓴다.*/
+	left:10px; top:-5px;
+   }
+   .search > input[type=image]{
+	position:relative; 
+	left:10px; top:2px;
+   }
+  </style>
+</head>
+
+<body>
+ <h2>14폼태그</h2>
+ <p>
+  폼 태그란? 사용자가 입력한 정보(아이디, 패스워드 등)를 서버로 전송하는 역할을 하며, 폼태그를 활용한 양식의 종류에는
+  로그인폼, 회원가입폼, 검색폼, 예약폼 등의 다양한 양식을 만들 수 있다.
+ </p>
+ <p>
+  양식은 form태그를 묶어서 작성하며 name(폼이름), method(전송방법), action(받을 서버주소) 속성이 반드시 들어가야 한다.
+ </p>
+
+ <h3>1. 폼태그의 종류</h3>
+ <ul>
+  <li>form : 입력 정보를 서버로 보낼 때</li>
+  <li>input : 글자를 입력하는 양식이나 버튼</li>
+  <li>select, option : 선택목록</li>
+  <li>textarea : 여러 줄의 텍스트 입력양식</li>
+  <li>label : 양식의 이름표</li>
+  <li>button : 버튼양식</li>
+ </ul>
+
+ <p>
+  1.GET : 소량의 데이터를 전송할 때 사용하며, 데이터 전송시 주소가 공개된다는 단점.(보안에 약함) <br>
+  2.POST : 대량의 데이터를 전송할 때 사용하며 서버로 데이터 전송시 주소가 비공개로 전송되는 장점이 있다.(주로 많이 사용) <br>
+  폼태그는 한번만 사용하면 된다.
+ </p>
+
+ <form name="폼이름" method="post" action="받을서버주소">
+  <p>1.텍스트박스 - 글자를 입력하기 위한 박스</p>
+  <input type="text" maxlength="16">
+
+  <p>2. 패스워드박스 - 패스워드나 공개되지 않는 데이터를 입력할 때</p>
+  <input type="password" maxlength="16">
+
+  <p>3. 라디오버튼 - 여러개의 항목중에 사용자가 원하는 항목을 선택하기 위한 양식. name속성을 사용하여 그룹핑 한다.</p>
+  <input type="radio" name="a" id="r01" checked><label for="r01">동의함</label> <!--id, for는 글씨까지 연결되게 만들어준다. checked는 미리 체크되어있게 해준다.-->
+  <input type="radio" name="a" id="r02"><label for="r02">동의안함</label>
+
+  <p>4. 체크박스 - 여러개의 항목중에 사용자가 원하는 항목만 다중선택할 수 있는 양식</p>
+  취미 선택하기 : 
+  <input type="checkbox" id="c01"><label for="c01">컴퓨터</label>
+  <input type="checkbox" id="c02"><label for="c02">음악감상</label>
+  <input type="checkbox" id="c03"><label for="c03">독서</label>
+  <input type="checkbox" id="c04"><label for="c04">게임</label>
+  <input type="checkbox" id="c05"><label for="c05">기타</label>
+
+  <p>5. 선택목록 - 사용자가 클릭하면 목록이 펼쳐지면서 선택하는 양식</p>
+  <select name="색옵션">
+   <option>옵션을 선택하세요</option>
+   <option>빨강</option>
+   <option>노랑</option>
+   <option>검정</option>
+   <option>흰색</option>
+  </select>
+  <p>쇼핑몰 제품선택, 통신사, 사이즈, 인원수, 년, 월, 일 선택 등에 활용</p>
+
+  <p>
+   6. 다중텍스트 박스 - 한줄이 아닌 여러줄의 내용을 입력하고자 할 때 사용하는 양식이며,
+   주로 이메일쓰기, 게시판 글 작성하기, 문의하기 등에 활용할 수 있다.
+  </p>
+  <textarea cols="50" rows="15">
+   이 곳에 내용을 작성합니다.
+   칸수는 cols, 줄수는 rows로 설정합니다.
+  </textarea>
+
+  <p>7. 파일첨부 - 버튼을 클릭하면 파일을 첨부하기 위한 창이 활성화됨.</p>
+  <input type="file">
+
+  <p>8. 전송버튼, 취소버튼, 일반버튼, 이미지버튼</p>
+  <p>전송버튼을 사용자가 입력한 내용을 서버로 전송하는 역할을 함.</p>
+  <input type="submit" value="확인">
+
+  <p>취소하기 버튼은 사용자가 입력한 내용을 삭제함(화면이 리셋됨)</p>
+  <input type="reset" value="취소">
+
+  <p>일반버튼은 '중복확인'이나 기타전송, 취소하기 이외의 버튼에 사용</p>
+  <input type="button" value="중복확인">
+
+  <p>이미지버튼 이미지를 삽입하여 문자대신에 보여주기 위한 버튼으로서 시각적인 표현이 가능하다.</p>
+  <input type="image" src="imagebutton.png" alt="이미지버튼"> <br>
+  <input type="image" src="searchbutton.png" alt="검색아이콘"> <!--가로세로 25px-->
+
+  <h3>검색박스 구현하기</h3>
+
+  <div class="search">
+   <input type="search">
+   <input type="image" src="searchbutton.png" alt="검색아이콘">
+  </div>
+
+ </form>
+ 
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>html태그학습-16html5 추가폼태그</title>
+</head>
+
+<body>
+ <h2>16_html5 추가폼 태그</h2>
+ <p>
+  html5에서 새로 추가된 태그와 속성들은 현재 사용하고 있는 웹브라우저(크롬, 익스플로러, 사파리, 오페라, 파이어폭스,
+  기타 모바일 브라우저)에서 버전별 지원을 하기 때문에 지원상황을 확인하고 사용해야 한다. http://caniuse.com
+ </p>
+
+ <form name="" action="" method="">
+ <p>1. search : 검색단어를 입력하기 위한 박스로서 입력시 오른쪽 긑에 'X'표시가 나오면서 클릭시 삭제가 가능하다.</p>
+  <input type="search"><input type="button" value="검색">
+
+ <p>2. email : 이메일 주소를 입력하기 위한 박스로서 입력양식이 맞지 않을 경우 에러가 나옴.</p>
+  <label for="email">이메일 주소 입력 : </label>
+  <input type="email" id="email" placeholder="아이디@naver.com">
+  <input type="submit" value="구독신청">
+  <p>
+  웹접근성 측면에서 노약자나 장애인 분들이 주소양식을 알 수 있도록 placeholder속성을 사용하여
+  안내문구를 넣어주는 것이 좋다.
+  </p>
+
+ <p>3. url : url주소를 입력하기 위한 박스로서 입력양식이 맞지 않을 경우 에러가 나옴.</p>
+  <input type="url" placeholder="http://도메인명.co.kr">
+  <input type="submit" value="주소 보내기">
+
+ <p>4. tel : 전화번호를 입력하기 위한 박스로서 모바일에서는 숫자 키패드가 활성화됨.</p>
+  <input type="tel" maxlength="4"> - <input type="tel" maxlength="4">
+
+ <p>5. number : 숫자를 입력하기 위한 박스로서 직접 입력하거나 화살표로 설정이 가능하다.</p>
+  <input type="number">
+
+ <p>6. range : 숫자범위를 슬라이드 바로 조정하고자 할 때 사용하는 양식</p>
+  <input type="range">
+
+ <p>7. date : 년도, 월, 일을 선택하기 위한 양식</p>
+  <input type="date">
+
+ <p>8. month : 년도, 월만 선택하기 위한 양식</p>
+  <input type="month">
+
+ <p>9. week : 년도, 주만 선택하기 위한 양식</p>
+  <input type="week">
+
+ <p>10. time : 시간, 분을 선택하기 위한 양식</p>
+  <input type="time">
+
+ <p>11. color : 색상을 선택하기 위한 양식</p>
+  <input type="color">
+ 
+
+ </form>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

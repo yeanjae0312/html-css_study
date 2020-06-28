@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <title>html태그학습_17html추가 폼태그</title>
+
+ <style>
+  fieldset{
+	width:430px;
+	border:2px solid #f00;
+	margin-bottom:10px;
+  }
+  legend{
+	font-weight:bold;
+	font-size:16px;
+	color:#00f;
+  }
+  fieldset > input{margin-bottom:10px;}
+  .btn > input{
+	padding:5px 10px;
+	background-color:#333;
+	color:#fff;
+	border:none;
+  }
+ </style>
+</head>
+
+<body>
+ <h2>17html추가 폼태그</h2>
+ <p> 
+  html5에서는 시멘틱구조를 표현하기 위한 폼태그가 추가되었는데 폼그룹을 지정하기 위한 fieldset,
+  그룹 안에 제목을 지정하기 위한 legend태그가 있다.
+ </p>
+
+ <form name="" method="" action="">
+  <fieldset>
+   <legend>로그인</legend>
+   <input type="text" maxlength="16" placeholder="아이디"> <br>
+   <input type="password" maxlength="16" placeholder="패스워드">
+  </fieldset>
+
+  <fieldset>
+   <legend>개인정보</legend>
+   <label>이름</label> <input type="text"> <br>
+   <label>연락처</label> <input type="tel" placeholder="000-0000-0000">
+  </fieldset>
+
+  <fieldset>
+   <legend>배송지 정보</legend>
+   <label>받는 사람</label> <input type="text"> <br>
+   <label>주소</label> <input type="text"> <br>
+   <label>전화번호</label>
+    <select>
+     <option>010</option>
+     <option>011</option>
+     <option>별정통신</option>
+    </select>
+    - <input type="tel" maxlength="4" size="8"> - <input type="tel" maxlength="4" size="8"> <br>
+   <label>배송시 요구사항</label>
+    <textarea cols="30" rows="5"></textarea>
+  </fieldset>
+
+  <fieldset>
+   <legend>주문 정보</legend>
+   <p><input type="checkbox" id="c1"><label for="c1">과테말라 안티구아 (100g)</label> <input type="number" id="n1"><label for="n1">개</label></p>
+   <p><input type="checkbox" id="c2"><label for="c2">인도네시아 만델링 (100g)</label> <input type="number" id="n2"><label for="n2">개</label></p>
+   <p><input type="checkbox" id="c3"><label for="c3">탐라는도다(블렌딩) (100g)</label> <input type="number" id="n3"><label for="n3">개</label></p>
+  </fieldset>
+   <p class="btn">
+   <input type="submit" value="주문하기">
+   <input type="reset" value="취소하기">
+   </p>
+
+ </form>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <title>html태그학습_09하이퍼링크 </title>
+</head>
+
+<body>
+ <a href="#bottom" title="아래로 바로가기">아래로 이동하기</a> <br>
+ <a href="#text_hyperlink" title="텍스트로 링크걸기">1. 텍스트로 링크걸기</a> <br>
+ <a href="#image_hyperlink" title="이미지로 링크걸기">2. 이미지로 링크걸기</a> <br>
+ <a href="#email_hyperlink" title="이메일로 링크걸기">3. 이메일로 링크걸기</a> <br>
+ <a href="#location_hyperlink" title="특정위치로 링크걸기">4. 특정위치로 링크걸기</a> <br>
+ <a href="../06-17/08_svg_image_tag.html#d" title="특정위치로" target="_blank">5. 특정페이지의 특정위치로 링크걸기</a>
+
+ <h2 id="top">09하이퍼링크 p.46</h2> <!-- 네임태그(앵커)는 id로 해주면 된다. -->
+ <p>
+  하이퍼링크란? 하이퍼텍스트로 이루어진 문서에서 사용자가 마우스로 클릭을 하였을 때 다른 문서나 페이지로 이동하기 위한 요소로서
+  텍스트 하이퍼링크, 이미지 하이퍼링크, 이메일 하이퍼링크, 특정문서의 특정위치로 이동하기 위한 링크, 하나의 이미지에 여러개의
+  링크를 할 수 있는 이미지 맵 링크가 있다.
+ </p>
+ <p>
+  작성법) Anchor Hyper reference의 약자인 a태그와 href속성을 사용한다. <br>
+  a href="연결할 문서의 주소나 경로" title="설명문구"
+ </p>
+
+ <h3 id="text_hyperlink">1. 텍스트에 하이퍼링크 걸기</h3>
+ <a href="http://www.naver.com" title="네이버 바로가기">네이버</a>
+ <a href="http://www.daum.net" title="다음 바로가기">다음</a>
+ <a href="http://www.nate.com" title="네이트 바로가기">네이트</a>
+ <a href="http://www.google.co.kr" title="구글 바로가기">구글</a>
+
+ <p>
+  문자에 하이퍼링크시 파랑색 밑줄이 기본스타일이며, 한번이라도 클릭한 적 있는(visited) 문자는 보라색 밑줄로 표시됨.
+  css에서 스타일을 변경할 수 있다.
+ </p>
+ <p>
+  title속성은 사용자가 링크가 걸린 요소에 마우스 오버시 설명글이 나오도록 하는 속성이며, 모든 사용자가 이해할 수 있도록 하기 위한
+  웹접근성 방법중의 하나이다. html마크업 검사시 속성을 안넣으면 오류가 나옴.
+ </p>
+
+ <dl>
+  <dt>수업시 참고사이트</dt>
+  <dd><a href ="https://www.w3schools.com" title="w3c온라인 학습사이트 바로가기">w3c온라인 학습사이트(html, css, javascript, jquery)</a></dd>
+  <dd><a href="https://www.dbcut.com/bbs/index.php" title="디비컷 사이트 바로가기">디비컷 - 국내, 해외사이트를 카테고리별로 모은 사이트</a></dd>
+  <dd><a href="https://validator.kldp.org" title="html마크업 검사사이트 바로가기">html마크업 검사 서비스</a></dd>
+ 
+  <dt>수업시 작업한 문서 보기</dt>
+  <dd><a href="../06-17/07_image_tag.html" title="이미지태그">이미지 태그 문서</a></dd>
+  <dd><a href="../06-17/08_svg_image_tag.html" title="svg이미지태그">svg문서</a></dd>
+  <dd><a href="../06-17/06_list_tag.html" title="목록태그">목록태그 문서</a></dd>
+
+  <dd><a href="http://www.youtube.com" title="유튜브">유튜브 영상보기</a></dd>
+ </dl>
+
+ <p>
+  a요소 사용시 href, title속성은 필수 속성이며, 클릭시 새로운 페이지로 링크를 연결하기 위해, 또는 특정위치로 이동하기 위해
+  target속성을 추가로 사용할 수 있다. <br>
+ 
+  target="_blank" : 새로운 탭에서 페이지가 열림.
+ </p>
+
+ <a href="http://www.11st.co.kr" title="11번가" target="_blank">11번가 바로가기</a>
+ 
+ <h3 id="image_hyperlink">2. 이미지로 하이퍼링크 하기</h3>
+
+ <a href="http://www.naver.com" title="네이버 바로가기" target="_blank"><img src="../06-17/img/naver_logo.gif" alt="네이버로고 이미지"></a> <br>
+ <a href="http://www.daum.net" title="다음 바로가기" target="_blank"><img src="../06-17/img/daum_logo.png" alt="다음로고 이미지"></a> <br>
+ <a href="http://www.starbucks.co.kr" title="스타벅스 바로가기" target="_blank"><img src="../06-17/img/logo/starbucks_logo.png" alt="스타벅스로고 이미지"></a>
+
+ <p>
+  title속성 : a태그 작성시 사용자가 마우스를 올렸을 때 도움말이 나오도록 하는 속성으로서 노약자, 장애인분들이 링크에 대한 도움말을 통해
+  정확한 이해를 돕고자 하는 보충설명으로서 웹접근성, 웹표준에서 지켜야 할 규칙중에 하나이다.
+ </p>
+ <p>
+  alt속성 : 이미지 삽입시 이미지에 대한 설명문구를 나타내며, 브라우저에서 이미지가 표시되지 않을 때 나오는 글자이기도 하다.
+  시각장애인분들이 이미지를 이해하기 위한 하나의 수단이기 때문에 반드시 넣어주고, 웹접근성, 웹표준에서 지켜야 할 규칙중에 하나이다.
+ </p>
+
+ <h3 id="email_hyperlink">3. 이메일로 하이퍼링크 하기</h3>
+ <p>
+  사용자가 문자나 이미지 클릭시 '아웃룩 프로그램'이 실행되면서 관리자나 상대방에게 메일을 보낼 수 있는 창이 뜨도록 하는 기능.
+ </p>
+
+ <!-- mailto:메일주소 -->
+ <a href="mailto:yeanjae@naver.com" title="관리자에게 메일보내기">관리자에게 이메일 보내기</a>
+
+ <h3 id="location_hyperlink">4. 특정위치로 이동하는 링크(네임앵커)</h3>
+ <p>
+  네임앵커 기능은 사용자가 원하는 위치에 이름을 표시한 뒤에 특정문자나 이미지를 클릭하면 이름이 표시된 위치로 이동하기 위해 사용한다.
+ </p>
+ <p>
+  또한 다른문서의 특정위치에 아이디값을 설정하면, 현재문서 뿐만 아니라 다른문서로도 위치이동이 가능하다.
+ </p>
+
+ <p>http://firstsoju.co.kr</p>
+ <p>http://www.ildongvileda.co.kr</p>
+ <p>http://amendini.baskinrobbins.co.kr</p>
+ 
+ <a href="#top" title="위로 바로가기">Top</a> <!--주소는 위에 id 이름으로 한다. 위로 한번에 올라가지 않고 위의 내용을 훑고 올라가는 것은 jQuery이다. -->
+ <p id="bottom">&nbsp;</p>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
